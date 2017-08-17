@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\nlibrary(DiagrammeR)\n\ngrViz(\"\ndigraph dot {\n\ngraph [layout = neato]\n\nnode [shape = circle,\n      style = filled,\n      color = grey,\n      label = '']\n\nnode [fillcolor = red]\na\n\nnode [fillcolor = green]\nb c d\n\nnode [fillcolor = orange]\n\nedge [color = grey]\na -> {b c d}\nb -> {e f g h i j}\nc -> {k l m n o p}\nd -> {q r s t u v}\n}\")\n\n\nmermaid(\n \" graph TB\n  \n  A(Population)-->B[Control]\n  A-->C[Subject Line 1]\n  A-->D[Subject Line 2]\")\n  B-->E\n  C-->F\n  C-->G\n  C-->H\n  D-->I\n  D-->J\n  D-->K\n  \")\n\n\n",
+    "created" : 1502981830462.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2107488394",
+    "id" : "1AFEAE2B",
+    "lastKnownWriteTime" : 1502985033,
+    "last_content_update" : 1502985033880,
+    "path" : "~/code_repo/design_experiment/diagran example.R",
+    "project_path" : "diagran example.R",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

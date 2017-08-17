@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\n\n\nshinyUI(fluidPage( useShinyjs(), \n\n  navbarPage(title = 'ABtester', \n    \n    \n    tabPanel('Experimentation design',\n             sidebarLayout(\n               sidebarPanel(width = 3,\n                            h3('Define you parameters and click Go!'),\n                            selectInput(inputId = 'type',label = 'What type of experiment is it?', choices = c('Email campaign','Direct mail campaign', 'DM + Email Follow up Campaign')),\n                            checkboxInput(inputId = 'SL',label = 'Subject line', value = F),\n                            checkboxInput(inputId = 'cre',label = 'Creative', value = F),\n                            checkboxInput(inputId = 'cop',label = 'Copy', value = F),\n                            checkboxInput(inputId = 'SD',label = 'Send day', value = F),\n                            checkboxInput(inputId = 'ST',label = 'Send time', value = F),\n                                             \n                            actionButton(inputId = 'go2',label = 'Go!')),\n               \n               mainPanel(\n                 div(class = 'title', \n                     'Design your testing framework'),\n                 div(class = 'diagram', \n                     DiagrammeROutput(outputId = 'diag', width = '100%'),\n                     verbatimTextOutput(outputId = 'lala')\n                     \n                     )\n                 \n                 )),\n             div(class = \"footer\", \"Developed with \", icon('heart'),\" in R and Rstudio - Powered by Shiny - Developped by CJB \", a(id = 'github', href = 'https://github.com/CJB2014', icon('github')))\n    ),\n    tabPanel('Sample Size calculator', tags$head(includeCSS('www/custom.css')),\n             column(width = 6 , align = 'center',\n                    div(class = 'top',\n                        verticalLayout(\n                          textInput(inputId = 'baseline', label = 'Baseline conversion rate:'),\n                          textInput(inputId = 'effect', label = 'Minimum Detectable Effect:'),\n                          selectInput(inputId = 'Variations', label = 'Variation:', choices = seq(2,20,1)),\n                          br(),\n                          actionButton(inputId = 'go', label = 'Submit!', style = \"font-weight: bold; color:#FFF; background-color: #B73265; border-color: #B73265\"))),\n                          br(),\n                          br(),\n                          div(class = 'bottom',\n                              HTML(\"<p>The minimum detectable effect is the smallest difference detected by the test. The effect will be deteted 80% of the time.</p>\"))),\n             column(width  = 6,  align = 'center',\n                    br(),\n                    br(),\n                    div(class = 'answers_div',\n                        textOutput(outputId = 'answer'))),\n             div(class = \"footer\", \"Developed with \", icon('heart'),\" in R and Rstudio - Powered by Shiny - Developped by CJB \", a(id = 'github', href = 'https://github.com/CJB2014', icon('github')))),\n    \n    tabPanel('Ab test interpretation',\n             \n             div(class = \"footer\", \"Developed with \", icon('heart'),\" in R and Rstudio - Powered by Shiny - Developped by CJB \", a(id = 'github', href = 'https://github.com/CJB2014', icon('github')))),\n    \n    tabPanel('About',\n             \n             div(class = \"footer\", \"Developed with \", icon('heart'),\" in R and Rstudio - Powered by Shiny - Developped by CJB \", a(id = 'github', href = 'https://github.com/CJB2014', icon('github'))))\n  \n\n)))\n",
+    "created" : 1502979406093.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1253326481",
+    "id" : "A72D3719",
+    "lastKnownWriteTime" : 1502984951,
+    "last_content_update" : 1502984951683,
+    "path" : "~/code_repo/design_experiment/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

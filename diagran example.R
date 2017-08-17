@@ -32,7 +32,7 @@ mermaid(
   
   A(Population)-->B[Control]
   A-->C[Subject Line 1]
-  A-->D[Subject Line 2]
+  A-->D[Subject Line 2]")
   B-->E
   C-->F
   C-->G

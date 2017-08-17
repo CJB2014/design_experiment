@@ -5,17 +5,10 @@ library(highcharter)
 library(DiagrammeR)
 
 
-# names_nodes <- function(num, lev = c('SL', 'CRE','COP','SD','ST') ){
-#   a <- vector()
-#   for (i in 1:num){
-#     a <- append(a ,paste(lev, i , sep =' '))
-#     a <- append(a, paste('control', i, sep =' '))
-#     a <- append(a, 'Control')
-#   }
-#   return(a)
-# }
-
-
+var_to_test <- c('Subject line',
+                 'Creative',
+                 'Copy',
+                 'Send day & time')
 
 names_nodes <- function(SL ,CRE ,COP ,SD , ST ){
   a <- vector()

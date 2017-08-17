@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\nlibrary(shiny)\nlibrary(shinyjs)\nlibrary(highcharter)\nlibrary(DiagrammeR)\n\n\nvar_to_test <- c('Subject line',\n                 'Creative',\n                 'Copy',\n                 'Send day & time')\n\nnames_nodes <- function(SL ,CRE ,COP ,SD , ST ){\n  a <- vector()\n  b <- vector()\n  c <- vector()\n  d <- vector()\n  e <- vector()\n\n  for (i in 1:SL){\n    a <- append(a ,paste(rep('SL', SL), i , sep =' '))\n    a <- append(a, paste('control', i, sep =' '))\n    a <- append(a, 'Control')\n  }\n  \n  for (i in 1:CRE){\n    b <- append(b ,paste(rep('CRE', CRE), i , sep =' '))\n    b <- append(b, paste('control', i+SL, sep =' '))\n    b <- append(b, 'Control')\n  }\n  \n  for (i in 1:COP){\n    c <- append(c ,paste(rep('COP',COP), i , sep =' '))\n    c <- append(c, paste('control', i+SL+CRE, sep =' '))\n    c <- append(c, 'Control')\n  }\n  \n  for (i in 1:SD){\n    d <- append(d ,paste(rep('SD', SD), i , sep =' '))\n    d <- append(d, paste('control', i+SL+CRE+COP, sep =' '))\n    d <- append(d, 'Control')\n  }\n  \n  for (i in 1:ST){\n    e <- append(e ,paste(rep('ST', ST), i , sep =' '))\n    e <- append(e, paste('control', i+SL+CRE+COP+SD, sep =' '))\n    e <- append(e, 'Control')\n  }\n  all <- c(a,b,c,d,e)\n  return(all)\n}\n\nbb <- names_nodes(2,3,4,2,3)\nnn <- create_node_df(n = length(bb), type = 'lower', label = bb, shape = rep('rectangle', length(bb)))\n\nrender_graph(create_graph( nodes_df = nn) )\n\nnn\n\n\n",
+    "created" : 1502979414752.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1929008985",
+    "id" : "6EE03002",
+    "lastKnownWriteTime" : 1502981425,
+    "last_content_update" : 1502981425431,
+    "path" : "~/code_repo/design_experiment/global.R",
+    "project_path" : "global.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
