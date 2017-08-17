@@ -12,8 +12,15 @@ shinyServer(function(input, output) {
     
   observeEvent(input$go2, {
     
-    grViz()
-                 
+    if (input$type == 'Email campaign'){
+      
+      
+      
+      
+    } else if (input$type == 'Direct mail campaign'){
+      
+    }
+    
                  
                })
   
